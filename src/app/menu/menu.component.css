@@ -1,0 +1,34 @@
+a {
+  color: rgb(17, 16, 16);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover{
+  opacity: 0.7;
+}
+
+.logo {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(241, 241, 241);
+  height: 8vh;
+}
+
+.lista{
+  list-style: none;
+  display: flex;
+}
+
+.lista li {
+  letter-spacing: .188rem;
+  margin-right: 1rem;
+}

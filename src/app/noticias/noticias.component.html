@@ -1,0 +1,47 @@
+<section class="container">
+  <div class="cadastro">
+    <!-- FORMULARIO -->
+    <form class="formulario" autocomplete="off">
+      <h2 class="txt-form">Cadastre uma nova notícia:</h2>
+
+      <!-- <label>Título:</label> -->
+      <input class="input-text" placeholder="Título" type="text" />
+
+      <!-- <label>Link de imagem:</label> -->
+      <input class="input-text" placeholder="Link da imagem" type="text" />
+
+      <!-- <label>Texto:</label> -->
+      <textarea
+        class="msg"
+        cols="35"
+        rows="8"
+        placeholder="Insira o texto da sua notícia"
+      ></textarea>
+
+      <input class="btn" type="submit" value="Enviar" />
+    </form>
+
+    <!-- IMAGEM -->
+    <div class="imagem">
+      <img src="https://i.imgur.com/bvrfq6B.png" alt="Imagem para notícia" />
+    </div>
+  </div>
+
+  <div class="titulo">
+    <h2 class="txt-titulo">NOTÍCIAS</h2>
+  </div>
+
+  <div class="noticias">
+    <div class="posts">
+      <div class="card" *ngFor="let item of listaPostagens">
+        <img src="{{ item.image }}" alt="Banner do Post" class="imgNoticia" />
+
+        <div class="innerPost">
+          <h3>{{ item.title }}</h3>
+          <p class="textPost">{{ item.body }}</p>
+          <a href="#">Ler mais</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
