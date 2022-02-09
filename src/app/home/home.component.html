@@ -1,1 +1,42 @@
-<p>home works!</p>
+<header>
+  <h2>Exibindo resultados de busca:</h2>
+  <h5 class="color">Encontramos um total de XX resultados</h5>
+</header>
+
+<section class="main">
+  <div class="posts">
+
+    <div class="card" *ngFor="let item of listaPostagens">
+
+      <img src="{{item.image}}" alt="Banner do Post" class='imgNoticia'>
+
+      <div class="innerPost">
+        <h3>{{item.title}}</h3>
+        <p class='textPost'>{{item.body}}</p>
+        <a href="#">Ler mais</a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="sidebar">
+
+      <h4>Categorias</h4>
+    <ul>
+      <li>Lorem, ipsum dolor.</li>
+      <li>Lorem, ipsum dolor.</li>
+      <li>Lorem, ipsum dolor.</li>
+      <li>Lorem, ipsum dolor.</li>
+    </ul>
+
+    <h4>Procurando alguma noticia?</h4>
+    <div class="submit-line">
+      <input type="text" placeholder="Pesquisar por...">
+      <button class="submit-lente" type="submit">
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </button>
+    </div>
+
+  </div>
+</section>
