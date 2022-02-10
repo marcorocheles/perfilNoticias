@@ -16,6 +16,9 @@ export class NoticiasComponent implements OnInit {
   listaPostagens: Postagem[]
   idPostagem: number
 
+  key = 'data'
+  reverse = true
+
   constructor(
     private noticiasService: NoticiasService,
     private router: Router

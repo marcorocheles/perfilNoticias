@@ -8,9 +8,7 @@ import { Postagem } from '../model/Postagem';
 })
 export class NoticiasService {
 
-  constructor(
-    private http: HttpClient
-  ) {}
+  constructor(private http: HttpClient) {}
 
   getAllPostagens(): Observable<Postagem[]>{
     return this.http.get<Postagem[]>('https://5cf9ae9df26e8c00146cff8d.mockapi.io/api/v1/post')
@@ -19,6 +17,7 @@ export class NoticiasService {
   getByIdPostagem(id: number): Observable<Postagem>{
     return this.http.get<Postagem>(`https://5cf9ae9df26e8c00146cff8d.mockapi.io/api/v1/post/${id}`)
   }
+  
 
   postPostagem(postagem: Postagem): Observable<Postagem> {
     return this.http.post<Postagem>('https://5cf9ae9df26e8c00146cff8d.mockapi.io/api/v1/post', postagem)

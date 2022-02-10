@@ -1,1 +1,20 @@
-<p>detalhes works!</p>
+<section class="container">
+
+  <div class="div-titulo">
+    <h2 class="txt-titulo">{{postagem.title}}</h2>
+  </div>
+
+  <div class="div-imagem">
+    <img class="imagem" src="{{postagem.image}}" alt="Imagem para notícia" />
+  </div>
+
+  <div class="texto">
+    {{postagem.body}}
+  </div>
+
+  <div class="d-flex justify-content-between">
+    <p class="card-text"><small class="text-muted">
+      {{postagem.createdAt | date: 'dd/MM/yyyy'}} às {{postagem.createdAt | date: 'HH:mm'}}
+    </small></p>
+    </div>
+</section>

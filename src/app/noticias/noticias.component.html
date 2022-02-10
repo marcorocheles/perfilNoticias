@@ -33,13 +33,13 @@
 
   <div class="noticias">
     <div class="posts">
-      <div class="card" *ngFor="let item of listaPostagens">
+      <div class="card" *ngFor="let item of listaPostagens | orderBy : key : reverse">
         <img src="{{ item.image }}" alt="Banner do Post" class="imgNoticia" />
 
         <div class="innerPost">
           <h3>{{ item.title }}</h3>
           <p class="textPost">{{ item.body }}</p>
-          <a href="#">Ler mais</a>
+          <a [routerLink]="['/detalhes', item.id]">Ler mais</a>
         </div>
       </div>
     </div>
