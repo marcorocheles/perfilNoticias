@@ -1,20 +1,25 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Postagem } from '../model/Postagem';
-import { PostagemService } from '../service/postagem.service';
+import { NoticiasService } from '../service/noticias.service';
+
 
 @Component({
   selector: 'app-noticias',
   templateUrl: './noticias.component.html',
   styleUrls: ['./noticias.component.css']
 })
+
 export class NoticiasComponent implements OnInit {
 
-  postagem: Postagem = new Postagem()
+  postagemNoticia: Postagem = new Postagem()
   listaPostagens: Postagem[]
+  idPostagem: number
 
   constructor(
-    private postagemService: PostagemService
-  ) { }
+    private noticiasService: NoticiasService,
+    private router: Router
+    ) { }
 
   ngOnInit(){
     
@@ -23,11 +28,21 @@ export class NoticiasComponent implements OnInit {
 
   }
 
-  
   getAllPostagens(){
-    this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
+    this.noticiasService.getAllPostagens().subscribe((resp: Postagem[]) => {
       this.listaPostagens = resp
     })
+  }
+
+  
+  publicar(){
+    this.noticiasService.postPostagem(this.postagemNoticia).subscribe((resp: Postagem) => {
+      this.postagemNoticia = resp
+      alert('Notícia postada com sucesso!')
+      this.postagemNoticia = new Postagem()
+      this.getAllPostagens()
+    })
+
   }
 
 }

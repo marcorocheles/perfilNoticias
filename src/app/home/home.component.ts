@@ -33,22 +33,22 @@ export class HomeComponent implements OnInit {
     })
   }
 
-  findByIdPostagem(){
-    this.postagemService.getByIdPostagem(this.idPostagem).subscribe((resp: Postagem) =>{
-      this.postagem = resp
-    })
-  }
+  // findByIdPostagem(){
+  //   this.postagemService.getByIdPostagem(this.idPostagem).subscribe((resp: Postagem) =>{
+  //     this.postagem = resp
+  //   })
+  // }
 
-  publicar(){
-    this.postagem.id = this.idPostagem
+  // publicar(){
+  //   this.postagem.id = this.idPostagem
     
-    this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
-      this.postagem = resp
-      alert('Postagem realizada com sucesso!')
-      this.postagem = new Postagem()
-      this.getAllPostagens()
-    })
+  //   this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
+  //     this.postagem = resp
+  //     alert('Postagem realizada com sucesso!')
+  //     this.postagem = new Postagem()
+  //     this.getAllPostagens()
+  //   })
 
-  }
+  // }
 
 }

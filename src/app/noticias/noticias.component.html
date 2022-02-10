@@ -2,23 +2,22 @@
   <div class="cadastro">
     <!-- FORMULARIO -->
     <form class="formulario" autocomplete="off">
-      <h2 class="txt-form">Cadastre uma nova notícia:</h2>
+      <h2 class="txt-form" >Cadastre uma nova notícia:</h2>
 
-      <!-- <label>Título:</label> -->
-      <input class="input-text" placeholder="Título" type="text" />
+      <input [(ngModel)]="postagemNoticia.title" name="title" class="input-text" placeholder="Título" type="text"  />
 
-      <!-- <label>Link de imagem:</label> -->
-      <input class="input-text" placeholder="Link da imagem" type="text" />
+      <input [(ngModel)]="postagemNoticia.image" name="image" class="input-text" placeholder="Link da imagem" type="text" />
 
-      <!-- <label>Texto:</label> -->
       <textarea
+        [(ngModel)]="postagemNoticia.body" 
+        name="body"
         class="msg"
         cols="35"
         rows="8"
         placeholder="Insira o texto da sua notícia"
       ></textarea>
 
-      <input class="btn" type="submit" value="Enviar" />
+      <input class="btn" type="submit" value="Enviar" (click)="publicar()">
     </form>
 
     <!-- IMAGEM -->
@@ -26,7 +25,8 @@
       <img src="https://i.imgur.com/bvrfq6B.png" alt="Imagem para notícia" />
     </div>
   </div>
-
+  
+  <!-- TÍTULO -->
   <div class="titulo">
     <h2 class="txt-titulo">NOTÍCIAS</h2>
   </div>
