@@ -42,20 +42,16 @@ h3{
 
 @media screen and (min-width: 885px) and (max-width: 1043px) {
 	.card {
-    /* background-color: #40d240; */
-
     max-width: 20rem;
-    max-height: 50vh;
+    min-height: 31.25rem;
   }
 
 }
 
 @media screen and (max-width: 884px){
 	.card {
-    /* background-color: #d240cb; */
-
     max-width: 20rem;
-    max-height: 60vh;
+    min-height: 31.25rem;
   }
 
 }
@@ -76,9 +72,10 @@ h3{
 
 .card {
   border: 1px solid #c4c4c4;
+  background-color: #f3f3f3;
   border-radius: 5px;
   width: 20rem;
-  height: 50vh;
+  height: 31.25rem;
   margin: 1rem;
   overflow: hidden;
   display: flex;
@@ -118,7 +115,7 @@ h3{
 
 .sidebar {
 
-  display: absolute;
+  display: static;
   height: 10vh;
   width: 20vw;
   top: 0;
